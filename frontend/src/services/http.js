@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 class HttpService extends Component {
 
-    apiUrl = 'http://localhost:4200'
+    apiUrl = 'http://gustavotorregrosa.online:4200'
 
     doFetch = async ({url, method, data}) => {
         let request = this.generateRequestObject(url, method, data)

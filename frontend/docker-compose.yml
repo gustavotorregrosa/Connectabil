@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+
+    react:
+        build: 
+            dockerfile: ./react.dockerfile
+            context: .
+        volumes:
+            - './:/app'
+            - '/app/node_modules'
+        environment:
+            - NODE_ENV=development
+            - CI=true
+        ports:
+            - 3001:3000
